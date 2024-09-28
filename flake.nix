@@ -13,23 +13,24 @@
       # List packages installed in system profile. To search by name, run:
       # $ nix-env -qaP | grep wget
       environment.systemPackages =
-        [
-	pkgs.neovim
-	pkgs.fzf
-	pkgs.ripgrep
-	pkgs.starship
-	pkgs.tmux
-	pkgs.zoxide
-	pkgs.stow
-	pkgs.tldr
-	pkgs.mise
-	pkgs.eza
-	pkgs.zsh-autosuggestions
-	pkgs.rustup
-	pkgs.lazygit
+				[
+				pkgs.neovim
+					pkgs.fzf
+					pkgs.ripgrep
+					pkgs.starship
+					pkgs.tmux
+					pkgs.zoxide
+					pkgs.stow
+					pkgs.tldr
+					pkgs.mise
+					pkgs.eza
+					pkgs.zsh-autosuggestions
+					pkgs.rustup
+					pkgs.lazygit
 
-	pkgs.alacritty
-        ];
+# macOS programs
+					pkgs.alacritty
+				];
 
       # Auto upgrade nix package and the daemon service.
       services.nix-daemon.enable = true;
@@ -58,8 +59,17 @@
       nixpkgs.hostPlatform = "x86_64-darwin";
 
       system.defaults = {
-	dock.autohide = true;
+				dock.autohide = true;
       };
+
+			# homebrew
+			homebrew.enable = true;
+			homebrew.casks = [
+				"nikitabobko/tap/aerospace"
+				"discord"
+				"telegram"
+				"raycast"
+			];
     };
   in
   {
