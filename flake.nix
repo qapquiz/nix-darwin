@@ -17,6 +17,7 @@
 				pkgs.neovim
 					pkgs.fzf
 					pkgs.ripgrep
+					pkgs.fd
 					pkgs.starship
 					pkgs.tmux
 					pkgs.zoxide
@@ -67,8 +68,11 @@
 			homebrew.casks = [
 				"nikitabobko/tap/aerospace"
 				"discord"
-				"telegram"
+				"loom"
+				"obsidian"
 				"raycast"
+				"telegram"
+				"zed"
 			];
     };
   in
